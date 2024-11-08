@@ -281,6 +281,7 @@ span {
 }
 
 .contact form {
+    height: 75vh;
     width: 100%;
     max-width: 105rem;
     margin: 1rem auto;
