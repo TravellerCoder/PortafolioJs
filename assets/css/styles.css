@@ -281,7 +281,6 @@ span {
 }
 
 .contact form {
-    height: 75vh;
     width: 100%;
     max-width: 105rem;
     margin: 1rem auto;
@@ -333,6 +332,18 @@ span {
 .contact form .submit-button:hover {
     box-shadow: none;
     color: var(--text-color);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 5rem;
+}
+
+footer p {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 
