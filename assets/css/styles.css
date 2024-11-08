@@ -182,3 +182,7 @@ span {
     font-weight: 500;
     line-height: 3.5rem;
 }
+
+.proyectos-box img {
+    width: 15vw;
+}
