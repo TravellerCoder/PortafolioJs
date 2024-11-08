@@ -371,12 +371,66 @@ footer p {
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: .2rem solid var(--main-color);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
     }
 
     .navbar a{
         display: block;
         margin: 3rem 0;
         font-size: 2rem;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home img {
+        display: none;
+    }
+
+    .home-content {
+        width: 100vw;
+        text-align: left;
+        padding: 0 1.5rem;    
+    }
+
+    .home-content h1{
+        font-size: 4.5rem;
+    }
+
+    .proyectos-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proyecto-layer h4 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .proyecto-layer p {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: .3rem 0 1rem ;
+    }
+
+    .proyecto-button{
+        margin-bottom: .3rem;
+    }
+
+    .contact form .input-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
     }
 }
 
