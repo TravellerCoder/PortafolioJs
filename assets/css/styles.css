@@ -19,7 +19,7 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 body {
@@ -183,6 +183,91 @@ span {
     line-height: 3.5rem;
 }
 
-.proyectos-box img {
-    width: 15vw;
+.proyectos-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align: center;
 }
+
+.proyectos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.proyectos-container .proyectos-box {
+    position: relative;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    display: flex;
+    transition: .5s ease;
+}
+
+.proyectos-container .proyectos-box:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.proyectos-box img {
+    width: 100%;
+    transition: .7s ease;
+}
+
+.proyectos-box img:hover {
+    transform: scale(1.1);
+}
+
+.proyectos-box .proyecto-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .6s ease;
+}
+
+.proyectos-box:hover .proyecto-layer{
+    transform: translateY(0);
+}
+
+.proyecto-layer h4 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.proyecto-layer p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: .3rem 0 1rem ;
+}
+
+.proyecto-button {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    color: var(--second-bg-color);
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: .5s ease;
+}
+
+.proyecto-button:hover {
+    box-shadow: none;
+}
+
+
