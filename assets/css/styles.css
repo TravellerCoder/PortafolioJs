@@ -81,6 +81,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--bg-color);
 }
 
 .home-content h3 {
@@ -150,9 +151,34 @@ span {
     margin-left: 10rem;
 }
 
-.conoceme-img img {
-    width: 450px ;
-    height: 450px;
-    border-radius: 50%;
-    display: none;
+.conoceme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--second-bg-color);
+}
+
+.conoceme-content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.conoceme-content h2 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.conoceme-content h3 {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.conoceme-content p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3.5rem;
 }
