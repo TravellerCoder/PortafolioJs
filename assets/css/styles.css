@@ -274,4 +274,67 @@ span {
     background: var(--second-bg-color);
 }
 
+.contact h2 {
+    font-size:4.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    width: 100%;
+    max-width: 105rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form  textarea {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: var(--bg-color);
+    border-radius: 1rem;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: .5s ease;
+}
+
+.contact form .input-box input{
+    width: 48%;
+}
+
+.contact form .input-box input:focus,
+.contact form  textarea:focus {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.contact form .submit-button{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    color: var(--second-bg-color);
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: .5s ease;
+}
+
+.contact form .submit-button:hover {
+    box-shadow: none;
+    color: var(--text-color);
+}
+
+
+
+
 
