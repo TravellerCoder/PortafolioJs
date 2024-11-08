@@ -270,4 +270,8 @@ span {
     box-shadow: none;
 }
 
+.contact {
+    background: var(--second-bg-color);
+}
+
 
