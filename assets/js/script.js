@@ -1,5 +1,6 @@
 /*--------------- toogle navbar ---------------*/
 
+
 let menuIcon = document.querySelector('#menu-icon');
 let navBar = document.querySelector('.navbar');
 
@@ -8,7 +9,7 @@ menuIcon.onclick = () => {
     navBar.classList.toggle('active');
 }
 
-/*--------------- class active navbar and scroll to section ---------------*/
+/*--------------- clase active de navbar y scroll a section ---------------*/
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -29,4 +30,35 @@ window.onscroll = () => {
             });
         }
     });
+
+    /*--------------- remover el toggle del icon y navbar cuando hace click en el navbar link ---------------*/
+
+    navLinks.forEach(link => {
+        link.onclick = () => {
+            menuIcon.classList.remove('bx-x');
+            navBar.classList.remove('active');
+        }
+    });
 };
+
+/*--------------- scroll reveal ---------------*/
+
+ScrollReveal({
+    reset: true,
+    distance: '100px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .conoceme-title, .proyectos-title, .contact-title', { origin: 'top' });
+ScrollReveal().reveal('.home img, .proyectos-container,.contact form', { origin: 'bottom' });
+
+/*--------------- typed js ---------------*/
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Desarrollador Web Frontend'],
+    typeSpeed: 100,
+    backSpeed: 120,
+    loop: true
+});
+
