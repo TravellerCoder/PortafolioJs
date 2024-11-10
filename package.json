@@ -1,0 +1,22 @@
+{
+  "name": "portafolio-int",
+  "version": "1.0.0",
+  "description": "Portfolio Traveller Coder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TravellerCoder/PortafolioJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TravellerCoder/PortafolioJs/issues"
+  },
+  "homepage": "https://github.com/TravellerCoder/PortafolioJs#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
