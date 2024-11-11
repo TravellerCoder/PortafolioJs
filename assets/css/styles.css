@@ -323,6 +323,7 @@ span {
     font-size: 1.6rem;
     font-weight: 500;
     transition: .5s ease;
+    resize: none;
 }
 
 .contact form .input-box input{
@@ -377,7 +378,7 @@ footer p {
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 850px){
     #menu-icon {
         display: block;
     }
