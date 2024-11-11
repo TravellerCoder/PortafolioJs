@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const publicPaht = path.resolve(__dirname, 'assets');
+const publicPath = path.resolve(__dirname, 'assets');
 app.use(express.static(publicPath));
 //const port = process.env.PORT || 3000;
 const port = 3000;

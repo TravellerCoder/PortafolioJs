@@ -109,4 +109,30 @@ function validationForm(){
     }
 
     return correctValidation;
+};
+
+const validateCaptcha = () => {
+    const captchaResponse = grecaptcha.getResponse();
+    const errorCaptcha = document.getElementById('errorCaptcha');
+
+    if (captchaResponse.length === 0) {
+        showError(errorCaptcha, 'Por favor, completa el captcha.');
+        return false;
+    } else {
+        unshowError(errorCaptcha);
+        return true;
+    }
 }
+
+document.getElementById('formulario').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const isFormValid = validateForm();
+    const isCaptchaValid = validateCaptcha();
+
+    if (isFormValid && isCaptchaValid) {
+        event.target.submit();
+    }
+});
+
+
