@@ -65,26 +65,41 @@ const typed = new Typed('.multiple-text', {
 
 /*--------------- form validation ---------------*/
 
-document.getElementById('form').addEventListener('submit', submitFunction) //esto escucha el envio del formulario
+const showError = (element, msj) => {  
+    element.textContent = msj;
+    element.style.display = 'block';
+}
+const unshowError = (element, msj) => { 
+    element.textContent = '';
+    element.style.display = 'none';
+}
+
+const submitFunction = (event) => {
+    if(!validationForm()){
+        event.preventDefault();
+    } 
+}
+
+document.getElementById('form').addEventListener('submit', submitFunction) 
 
 function validationForm(){
     const textAreas = document.querySelectorAll('input[type="text"]');
     let correctValidation = true;
 
     textAreas.forEach(area => {
-        let errorArea = document.getElementById('error' + area.id.charAt(0).toUpperCase() + area.id.slice(1)) //esto hace que la primera letra del campo sea mayuscula. 
+        let errorArea = document.getElementById('error' + area.id.charAt(0).toUpperCase() + area.id.slice(1)) 
         if (area.value.length == ''){
-            showError(errorArea, 'Este campo es obligatorio')//Este es el msj que se imprimira en la pantalla en caso que el campo este vacio
+            showError(errorArea, 'Este campo es obligatorio')
             correctValidation = false
         }else if(area.value.length < 3){
-            showError(errorArea, 'Este campo debe tener al menos 3 caracteres')//Este es el msj que se imprimira en la pantalla en caso que el campotenga 3 o menos caracteres
+            showError(errorArea, 'Este campo debe tener al menos 3 caracteres')
             correctValidation = false
         } else {
             unshowError(errorArea)
         }
     });
 
-    const email = document.getElementById('email');
+    const email = document.getElementById('Email');
     let errorEmail = document.getElementById('errorEmail');
 
     if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){ 
@@ -94,13 +109,4 @@ function validationForm(){
     }
 
     return correctValidation;
-}
-
-const showError = (element, msj) => {  
-    element.textContent = msj;
-    element.style.display = 'block';
-}
-const unshowError = (element, msj) => { 
-    element.textContent = '';
-    element.style.display = 'none';
 }
