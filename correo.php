@@ -1,10 +1,10 @@
 <?php
 
-$nombre = $_POST['Nombre'];
-$telefono = $_POST['Telefono'];
-$email = $_POST['Email'];
-$asunto = $_POST['Asunto'];
-$mensaje = $_POST['Mensaje'];   
+$nombre = $_POST['nombre'];
+$telefono = $_POST['telefono'];
+$email = $_POST['email'];
+$asunto = $_POST['asunto'];
+$mensaje = $_POST['mensaje'];   
 
 $formcontent="
     Datos de Contacto: \n
