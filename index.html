@@ -146,16 +146,20 @@
 <section class="contact" id="contacto">
     <h2 class="contact-title">Estemos en <span>contacto!</span></h2>
 
-    <form action="correo.php">
+    <form action="/correo.php" method="post">
 
         <div class="input-box">
-            <input type="text" placeholder="Nombre Completo" id="Nombre" required>
-            <input type="email" placeholder="Email" id="Email" required>
+            <input type="text" placeholder="Nombre Completo" id="Nombre" required autocomplete="off">
+            <div class="error" id="errorName"></div>
+            <input type="email" placeholder="Email" id="Email" required autocomplete="off">
+            <div class="error" id="errorEmail"></div>
         </div>
 
         <div class="input-box">
-            <input type="text" placeholder="Numero de telefono" id="Telefono" required>
-            <input type="text" placeholder="Asunto" id="Asunto" required>
+            <input type="text" placeholder="Numero de telefono" id="Telefono" required autocomplete="off">
+            <div class="error" id="errorPhone"></div>
+            <input type="text" placeholder="Asunto" id="Asunto" required autocomplete="off">
+            <div class="error" id="errorSubject"></div>
         </div>
 
         <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje" id="Mensaje"></textarea>
