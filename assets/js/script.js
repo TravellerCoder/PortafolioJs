@@ -68,10 +68,20 @@ const typed = new Typed('.multiple-text', {
 const showError = (element, msj) => {  
     element.textContent = msj;
     element.style.display = 'block';
+
+    const inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+    inputs.forEach(input => {
+        input.style.boxShadow = '0 0 1rem var(--error-color)';
+    });
 }
 const unshowError = (element, msj) => { 
     element.textContent = '';
     element.style.display = 'none';
+
+    const inputs = document.querySelectorAll('input[type="text"]');
+    inputs.forEach(input => {
+        input.style.boxShadow = 'none';
+    });
 }
 
 const submitFunction = (event) => {
