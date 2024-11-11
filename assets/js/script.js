@@ -72,13 +72,17 @@ const showError = (element, msj) => {
     const inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
     inputs.forEach(input => {
         input.style.boxShadow = '0 0 1rem var(--error-color)';
+        input.addEventListener('focus', () => {
+            unshowError(element);
+            input.style.boxShadow = '0 0 1rem var(--main-color)';
+    });
     });
 }
 const unshowError = (element, msj) => { 
     element.textContent = '';
     element.style.display = 'none';
 
-    const inputs = document.querySelectorAll('input[type="text"]');
+    const inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
     inputs.forEach(input => {
         input.style.boxShadow = 'none';
     });
