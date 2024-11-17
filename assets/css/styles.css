@@ -11,10 +11,18 @@
 }
 
 :root {
-    --bg-dark-color: #1f242d;
-    --second-bg-dark-color: #323946;
-    --text-dark-color: #f5f5f5; 
-    --main-dark-color: #12ea04; 
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #f5f5f5; 
+    --main-color: #12ea04; 
+    --error-color: #cc0303;
+}
+
+[tema= "ligth"] {
+    --bg-color: #f7f7f7;
+    --second-bg-color: #e2e2e2;
+    --text-color: #323946; 
+    --main-color: #2c58ce; 
     --error-color: #cc0303;
 }
 
@@ -24,8 +32,8 @@ html {
 }
 
 body {
-    background-color: var(--bg-dark-color);
-    color: var(--text-dark-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-size: 1.6rem;
 }
 
@@ -34,18 +42,18 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--bg-dark-color);
+    background: var(--bg-color);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--main-dark-color);
+    background-color: var(--main-color);
     border-radius: 10px;
-    border: 3px solid var(--bg-dark-color);
+    border: 3px solid var(--bg-color);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background-color: var(--main-dark-color);
-    border: 3px solid var(--bg-dark-color);
+    background-color: var(--main-color);
+    border: 3px solid var(--bg-color);
 }
 
 section {
@@ -54,7 +62,7 @@ section {
 }
 
 span {
-    color : var(--main-dark-color);
+    color : var(--main-color);
 }
 
 .header {
@@ -63,7 +71,7 @@ span {
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: var(--bg-dark-color);
+    background-color: var(--bg-color);
     padding: 2rem 9%;
     display: flex;
     justify-content: space-between;
@@ -73,19 +81,19 @@ span {
 .logo {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-dark-color);
+    color: var(--text-color);
     cursor: default;
 }
 
 #menu-icon {
     font-size: 2.5rem;
-    color: var(--text-dark-color);
+    color: var(--text-color);
     display: none;
     cursor: pointer;
 }
 
 .navbar a {
-    color: var(--text-dark-color);
+    color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 500;
     margin-left: 4rem;
@@ -94,14 +102,14 @@ span {
 
 .navbar a:hover, 
 .navbar a.active {
-    color: var(--main-dark-color);
+    color: var(--main-color);
 }
 
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-dark-color);
+    background: var(--bg-color);
 }
 
 .home-content h3 {
@@ -132,27 +140,27 @@ span {
     width: 4rem;
     height: 4rem;
     background: transparent;
-    border: .2rem solid var(--main-dark-color);
+    border: .2rem solid var(--main-color);
     border-radius: 50%;
     font-size: 2rem;
-    color: var(--main-dark-color);
+    color: var(--main-color);
     margin: 3rem 1.5re 3rem 0;
     transition: .5s ease;
 }
 
 .social-media a:hover {
-    background-color: var(--main-dark-color);
-    color: var(--second-bg-dark-color);
-    box-shadow: 0 0 1rem var(--main-dark-color);
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .cv-button {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: var(--main-dark-color);
+    background-color: var(--main-color);
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--main-dark-color);
-    color: var(--second-bg-dark-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    color: var(--second-bg-color);
     font-family: 'Electrolize', sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
@@ -175,7 +183,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--second-bg-dark-color);
+    background: var(--second-bg-color);
 }
 
 .conoceme-content {
@@ -193,7 +201,7 @@ span {
     font-family: 'Electrolize', sans-serif;
     font-size: 3.2rem;
     font-weight: 700;
-    color: var(--main-dark-color);
+    color: var(--main-color);
     margin-bottom: 2rem;
 }
 
@@ -226,7 +234,7 @@ span {
 }
 
 .proyectos-container .proyectos-box:hover{
-    box-shadow: 0 0 1rem var(--main-dark-color);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .proyectos-box img {
@@ -244,7 +252,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-dark-color)); 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color)); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,7 +270,7 @@ span {
 .proyecto-layer h4 {
     font-size: 2.8rem;
     font-weight: 700;
-    color: var(--text-dark-color);
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
@@ -275,9 +283,9 @@ span {
 .proyecto-button {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: var(--main-dark-color);
+    background-color: var(--main-color);
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--main-dark-color);
+    box-shadow: 0 0 1rem var(--main-color);
     color: var(--second-bg-color);
     font-family: 'Electrolize', sans-serif;
     font-size: 1.8rem;
@@ -291,7 +299,7 @@ span {
 }
 
 .contact {
-    background: var(--second-bg-dark-color);
+    background: var(--second-bg-color);
 }
 
 .contact h2 {
@@ -320,9 +328,9 @@ span {
     width: 100%;
     padding: 1.5rem;
     margin: 1rem 0;
-    background: var(--bg-dark-color);
+    background: var(--bg-color);
     border-radius: 1rem;
-    color: var(--text-dark-color);
+    color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 500;
     transition: .5s ease;
@@ -343,16 +351,16 @@ span {
 
 .contact form .input-box input:focus,
 .contact form  textarea:focus {
-    box-shadow: 0 0 1rem var(--main-dark-color);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .contact form .submit-button{
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: var(--main-dark-color);
+    background-color: var(--main-color);
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--main-dark-color);
-    color: var(--second-bg-dark-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    color: var(--second-bg-color);
     font-family: 'Electrolize', sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
@@ -362,7 +370,7 @@ span {
 
 .contact form .submit-button:hover {
     box-shadow: none;
-    color: var(--text-dark-color);
+    color: var(--text-color);
 }
 
 footer {
@@ -400,8 +408,8 @@ footer p {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background: var(--bg-dark-color);
-        border-top: .2rem solid var(--main-dark-color);
+        background: var(--bg-color);
+        border-top: .2rem solid var(--main-color);
         display: none;
     }
 
@@ -441,7 +449,7 @@ footer p {
     .proyecto-layer h4 {
         font-size: 1.8rem;
         font-weight: 700;
-        color: var(--text-dark-color);
+        color: var(--text-color);
         margin-bottom: 0.5rem;
     }
     
