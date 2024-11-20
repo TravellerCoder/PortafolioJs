@@ -24,10 +24,10 @@
     <i class='bx bx-menu' id="menu-icon"></i>
 
     <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#conoceme">Conoceme</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#home" data-value="home">Inicio</a>
+        <a href="#about-me" data-value="about-me">Conoceme</a>
+        <a href="#projects" data-value="projects">Proyectos</a>
+        <a href="#contacto" data-value="contact-me">Contacto</a>
         <label class="switch">
             <input type="checkbox" id="slider" checked>
             <span class="slider"></span>
@@ -40,10 +40,10 @@
 
 <section class="home" id="home">
     <div class="home-content">
-        <h3>Bienvenido</h3>
+        <h3 data-value="home-subtitle">Bienvenido</h3>
         <h1>Traveller Coder</h1>
-        <h3>Soy <span class="multiple-text"></span></h3>
-        <p>Desarrollo web freelance y para empresas. <br>
+        <h3 data-value="home-subtitle-description">Soy <span class="multiple-text" data-value="home-subtitle-description-typed"></span></h3>
+        <p data-value="home-description-text">Desarrollo web freelance y para empresas. <br>
             Tus ideas estan a un click de ser realidad.</p>
         
         <div class="social-media">
@@ -53,7 +53,7 @@
             <a href="https://github.com/TravellerCoder/" target="blank"><i class='bx bxl-github'></i></a> 
         </div>
 
-        <a href="/downloads/C-V Traveller Coder Español.pdf" class="cv-button" download="C-V Traveller Coder Español">Descargar CV</a>
+        <a href="/downloads/C-V Traveller Coder Español.pdf" class="cv-button" download="C-V Traveller Coder Español" data-value="home-download">Descargar CV</a>
 
     </div>
 
@@ -64,12 +64,12 @@
 
 <!--  Conoceme  -->
 
-<section class="conoceme" id="conoceme">
+<section class="conoceme" id="about-me">
 
     <div class="conoceme-content">
-        <h2 class="conoceme-title">Traveller Coder</h2>
-        <h3>Desarrollador Frontend</h3>
-        <p>
+        <h2 class="conoceme-title" data-value="about-me-title">Traveller Coder</h2>
+        <h3 data-value="about-me-subtitle">Desarrollador Frontend</h3>
+        <p data-value="about-me-text">
             Hola, soy Guillermo Bukowski, desarrollador web frontend con pasión por crear experiencias digitales únicas y funcionales. 
             Mi especialidad es transformar ideas en interfaces interactivas y visualmente atractivas, utilizando tecnologías como HTML, CSS, JavaScript y frameworks como React.
             Mi camino profesional comenzó en el año 2021, y desde entonces he trabajado en proyectos de todo tipo, desde aplicaciones web de pequeña escala 
@@ -87,61 +87,61 @@
 
 <!--  Proyectos  -->
 
-<section class="proyectos" id="proyectos">
-    <h2 class="proyectos-title">Mis <span>proyectos</span></h2>
+<section class="proyectos" id="projects">
+    <h2 class="proyectos-title" data-value="projects-title">Mis <span data-value="projects-title-span">proyectos</span></h2>
 
-    <div class="proyectos-container">
+    <div class="proyectos-container" id="projects-descrition">
         <div class="proyectos-box">
             <img src="/images/exquis-3.png" alt="" class="proyecto-img">
             <div class="proyecto-layer">
-                <h4>Exquis</h4>
-                <p>Modelo de landing page de restaurant, responsive.</p>
-                <a href="https://exquis-menu.onrender.com/" target="_blank" class="proyecto-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
+                <h4 data-value="project-01-title">Exquis</h4>
+                <p data-value="project-01-description">Modelo de landing page de restaurant, responsive.</p>
+                <a href="https://exquis-menu.onrender.com/" target="_blank" class="proyecto-button" data-value="project-link-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
             </div>
         </div>
     
         <div class="proyectos-box">
             <img src="/images/form 1.png" alt="" class="proyecto-img">
             <div class="proyecto-layer">
-                <h4>Form de registro</h4>
-                <p>Con validaciones de inputs del lado del front, responsive.</p>
-                <a href="https://form-travellercoder.netlify.app/" target="_blank" class="proyecto-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
+                <h4 data-value="project-02-title">Form de registro</h4>
+                <p data-value="project-02-description">Con validaciones de inputs del lado del front, responsive.</p>
+                <a href="https://form-travellercoder.netlify.app/" target="_blank" class="proyecto-button" data-value="project-link-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
             </div>
         </div>
 
         <div class="proyectos-box">
             <img src="/images/freelads1.png" alt="" class="proyecto-img">
             <div class="proyecto-layer">
-                <h4>Freelads</h4>
-                <p>Landing page de la empresa de marketing digital Freelads, con formulario de contacto, responsive.</p>
-                <a href="https://freelads.com.ar/" target="_blank" class="proyecto-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
+                <h4 data-value="project-03-title">Freelads</h4>
+                <p data-value="project-03-description">Landing page de la empresa de marketing digital Freelads, con formulario de contacto, responsive.</p>
+                <a href="https://freelads.com.ar/" target="_blank" class="proyecto-button" data-value="project-link-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
             </div>
         </div>
 
         <div class="proyectos-box">
             <img src="/images/shoes-shop1.png" alt="" class="proyecto-img">
             <div class="proyecto-layer">
-                <h4>ShoesShop</h4>
-                <p>Modelo de E-commerce de zapatillas, con carrito de compras, responsive.</p>
-                <a href="https://shoesshop-n9rs.onrender.com/" target="_blank" class="proyecto-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
+                <h4 data-value="project-04-title">ShoesShop</h4>
+                <p data-value="project-04-description">Modelo de E-commerce de zapatillas, con carrito de compras, responsive.</p>
+                <a href="https://shoesshop-n9rs.onrender.com/" target="_blank" class="proyecto-button" data-value="project-link-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
             </div>
         </div>
 
         <div class="proyectos-box">
             <img src="/images/Weather 2.png" alt="" class="proyecto-img">
             <div class="proyecto-layer">
-                <h4>Weather App</h4>
-                <p>App de clima consumiendo API de terceros, responsive.</p>
-                <a href="https://weathertravellerapp.netlify.app/" target="_blank" class="proyecto-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
+                <h4 data-value="project-05-title">Weather App</h4>
+                <p data-value="project-05-description">App de clima consumiendo API de terceros, responsive.</p>
+                <a href="https://weathertravellerapp.netlify.app/" target="_blank" class="proyecto-button" data-value="project-link-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
             </div>
         </div>
 
         <div class="proyectos-box">
             <img src="/images/github1.png" alt="" class="proyecto-img">
             <div class="proyecto-layer">
-                <h4>GitHub</h4>
-                <p>Recuerda que puedes ver el codigo de todos mis proyectos entrando en mi perfil de GitHub.</p>
-                <a href="https://github.com/TravellerCoder" target="_blank" class="proyecto-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
+                <h4 data-value="project-06-title">GitHub</h4>
+                <p data-value="project-06-description">Recuerda que puedes ver el codigo de todos mis proyectos entrando en mi perfil de GitHub.</p>
+                <a href="https://github.com/TravellerCoder" target="_blank" class="proyecto-button" data-value="project-link-button"><i class='bx bx-link-external' ></i>Ir al sitio</a>
             </div>
         </div>
     </div>
@@ -151,13 +151,13 @@
 <!--  Contacto  -->
 
 <section class="contact" id="contacto">
-    <h2 class="contact-title">Estemos en <span>contacto!</span></h2>
+    <h2 class="contact-title" data-value="contact-me-title">Estemos en <span>contacto!</span></h2>
 
     <form action="https://formsubmit.co/guillermobukowski@gmail.com" method="post" id="form" novalidate>
 
         <div class="input-box">
             <div class="input-file">
-                <input type="text" placeholder="Nombre Completo" id="Nombre" name="nombre"  autocomplete="off"> <br>
+                <input type="text" placeholder="Nombre Completo" id="Nombre" name="nombre"  autocomplete="off" data-value="input-name"> <br>
                 <div class="error" id="errorNombre"></div>
             </div>
             <div class="input-file">
