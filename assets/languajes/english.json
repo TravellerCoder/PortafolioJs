@@ -1,0 +1,50 @@
+{
+    "header" : {
+        "home": "Home",
+        "about-me": "About me",
+        "projects": "Projects",
+        "contact-me": "Contact me"
+    },
+
+    "home" : {
+        "home-subtitle" : "Welcome",
+        "home-subtitle-description" : "I'm",
+        "home-subtitle-description-typed" : "Frontend Web Developer",
+        "home-description-text" : "Freelance web development and for companies. Your ideas are one click away from becoming reality.",
+        "home-download" : "Download CV"
+    },
+
+    "about-me" : {
+        "about-me-title" : "Traveller Coder",
+        "about-me-subtitle" : "Frontend Web Developer",
+        "about-me-text" : "Hello, I'm Guillermo Bukowski, a frontend web developer with a passion for creating unique and functional digital experiences. My specialty is transforming ideas into interactive and visually attractive interfaces, using technologies such as HTML, CSS, JavaScript and frameworks such as React. My professional path began in 2021, and since then I have worked on projects of all types, from small-scale web applications to more complex platforms. Every project challenges me to learn and grow, and my focus is always on code quality and user experience. What sets my work apart is that I do it while traveling. I live and work in my RV, which allows me to combine my passion for technology with my love of adventure. This way of life gives me a unique perspective: each new place inspires me, connects me with new ideas and, above all, keeps me motivated to continue creating innovative solutions that positively impact users. For me, being a developer is not just a profession, it is a lifestyle. I enjoy working remotely, establishing lasting connections with my clients and teams, no matter where I am in the world. If you have a project in mind or simply want to know more about how I can help you shape your idea, do not hesitate to contact me, I am ready to face it, no matter if I am on the beach, in the mountains or on the road."
+    },
+
+    "projects" : {
+        "projects-title" : "My ",
+        "projects-title-span" : "projects"
+        },
+
+        "projects-unity" : {
+            "project-01-title" : "Exquis",
+            "project-01-description" : "Responsive restaurant landing page model.",
+            "project-02-title" : "Registration Form",
+            "project-02-title-description" : "With front-end input validations, responsive.",
+            "project-03-title" : "Freelads",
+            "project-03-description" : "Landing page of the digital marketing company Freelads, with contact form, responsive.",
+            "project-04-title" : "ShoesShop",
+            "project-04-description" : "E-commerce model for sneakers, with shopping cart, responsive.",
+            "project-05-title" : "Weather App",
+            "project-05-description" : "Weather app, using API of OpenWeatherMap, responsive.",
+            "project-06-title" : "Github",
+            "project-06-description" : "Remember, you can see the code of all my projects by entering my GitHub profile.",
+            "project-link-button" : "Go to site"
+        },
+
+    "contact-me" : {
+        "contact-me-title" : "Let's keep in ",
+        "contact-me-title-span" : "contact",
+        "input-name" : "Full Name"
+    }
+    
+}
