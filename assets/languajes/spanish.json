@@ -21,7 +21,7 @@
     },
 
     "projects" : {
-        "projects-title" : "Mis",
+        "projects-title" : "Mis ",
         "projects-title-span" : "proyectos"
         },
 
@@ -42,6 +42,8 @@
         },
 
     "contact-me" : {
+        "contact-me-title" : "Estemos en ",
+        "contact-me-title-span" : "contacto",
         "input-name" : "Nombre completo"
     }
     
