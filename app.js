@@ -18,5 +18,8 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname, './index.html'))
 });
 
+app.get('/confirmacion', function (req, res) {
+    res.sendFile(path.resolve(__dirname, './gracias.html'))
+});
 
 

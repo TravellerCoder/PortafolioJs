@@ -1,8 +1,59 @@
+/*--------------- typed js ---------------*/
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Desarrollador Web Frontend'],
+    typeSpeed: 100,
+    backSpeed: 120,
+    loop: true
+});
+
+
+
+/*--------------- languaje ---------------*/
+const langButtons = document.querySelectorAll("[data-language]");
+const textsToChange = document.querySelectorAll("[data-section]");
+const spansToChange = document.querySelectorAll("span[data-section]");
+console.log(textsToChange);
+console.log(spansToChange);
+
+
+langButtons.forEach((button) => {
+    button.addEventListener("click", async () => {
+        try {
+            const res = await fetch(`../languages/${button.dataset.language}.json`);
+            const data = await res.json();
+            
+            textsToChange.forEach((el) => {
+                const section = el.dataset.section;
+                const value = el.dataset.value;
+
+                el.innerHTML = data[section][value];
+            });
+
+            spansToChange.forEach((span=> {
+                const section = span.dataset.section;
+                const value = span.dataset.value;
+
+                span.innerHTML = data[section][value];
+            }));
+
+            if (button.dataset.language === 'es') {
+                typed.strings = ['Desarrollador Web Frontend'];
+            } else {
+                typed.strings = ['Frontend Web Developer'];
+            }
+            typed.reset();
+        } catch (error) {
+            console.log('error al cargar el archivo', error);
+        }
+    });
+});
+
+
 /*--------------- dark-ligth mood ---------------*/
 
 const preferedColorTheme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
 const slider= document.getElementById('slider');
-
 const changeTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
@@ -16,6 +67,9 @@ slider.addEventListener('click', () => {
 }
 
 changeTheme(localStorage.getItem('theme') || preferedColorTheme);
+
+
+
 
 /*--------------- toogle navbar ---------------*/
 
@@ -71,15 +125,6 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content, .conoceme-title, .proyectos-title, .contact-title', { origin: 'top' });
 ScrollReveal().reveal('.home img, .proyectos-container,.contact form', { origin: 'bottom' });
-
-/*--------------- typed js ---------------*/
-
-const typed = new Typed('.multiple-text', {
-    strings: ['Desarrollador Web Frontend'],
-    typeSpeed: 100,
-    backSpeed: 120,
-    loop: true
-});
 
 
 /*--------------- form validation ---------------*/

@@ -87,6 +87,18 @@ span {
     cursor: default;
 }
 
+.languages {
+    display: flex;
+    gap: .5rem;
+}
+
+.lang-button {
+    background-color: transparent;
+    font-size: 1.25rem;
+    border: 0;
+    cursor: pointer;
+}
+
 #menu-icon {
     font-size: 2.5rem;
     color: var(--text-color);
