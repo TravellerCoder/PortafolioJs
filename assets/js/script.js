@@ -3,6 +3,8 @@
 const langButtons = document.querySelectorAll("[data-language]");
 const textsToChange = document.querySelectorAll("[data-section]");
 const spansToChange = document.querySelectorAll("span[data-section]");
+const downloadBtnSpanish = document.getElementById('cv-button-spanish');
+const downloadBtnEnglish = document.getElementById('cv-button-english');
 console.log(textsToChange);
 console.log(spansToChange);
 
@@ -33,6 +35,15 @@ langButtons.forEach((button) => {
                 typed.strings = ['Frontend Web Developer'];
             }
             typed.reset();
+
+            if (button.dataset.language === 'es') {
+                downloadBtnSpanish.style.display = 'block';
+                downloadBtnEnglish.style.display = 'none';
+            } else {
+                downloadBtnSpanish.style.display = 'none';
+                downloadBtnEnglish.style.display = 'block';
+            }
+
         } catch (error) {
             console.log('error al cargar el archivo', error);
         }

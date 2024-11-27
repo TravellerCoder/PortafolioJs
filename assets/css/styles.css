@@ -249,6 +249,8 @@ input:checked + .slider:before {
     box-shadow: none;
 }
 
+
+
 .home-img img{
     width: 350px;
     height: 350px;
