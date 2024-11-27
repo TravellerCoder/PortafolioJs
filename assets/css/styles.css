@@ -194,7 +194,12 @@ input:checked + .slider:before {
 .home-content p {
     font-size: 1.8rem;
     font-weight: 500;
-    margin: 2rem 0 4rem;
+    margin: 2rem 0 1rem;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 3rem;
 }
 
 .social-media a {
@@ -208,7 +213,7 @@ input:checked + .slider:before {
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main-color);
-    margin: 3rem 1.5re 3rem 0;
+    margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
 }
 
