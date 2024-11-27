@@ -5,48 +5,47 @@ const textsToChange = document.querySelectorAll("[data-section]");
 const spansToChange = document.querySelectorAll("span[data-section]");
 const downloadBtnSpanish = document.getElementById('cv-button-spanish');
 const downloadBtnEnglish = document.getElementById('cv-button-english');
-console.log(textsToChange);
-console.log(spansToChange);
 
+const loadLanguage = async (language) => {
+    try {
+        const res = await fetch(`../languages/${language}.json`);
+        const data = await res.json();
+        
+        textsToChange.forEach((el) => {
+            const section = el.dataset.section;
+            const value = el.dataset.value;
+
+            el.innerHTML = data[section][value];
+        });
+
+        spansToChange.forEach((span => {
+            const section = span.dataset.section;
+            const value = span.dataset.value;
+
+            span.innerHTML = data[section][value];
+        }));
+
+        if (language === 'es') {
+            typed.strings = ['Desarrollador Web Frontend'];
+            downloadBtnSpanish.style.display = 'block';
+            downloadBtnEnglish.style.display = 'none';
+        } else {
+            typed.strings = ['Frontend Web Developer'];
+            downloadBtnSpanish.style.display = 'none';
+            downloadBtnEnglish.style.display = 'block';
+        }
+        typed.reset();
+    } catch (error) {
+        console.log('error al cargar el archivo', error);
+    }
+};
+
+const userLanguage = navigator.language.startsWith('es') ? 'spanish' : 'english';
+loadLanguage(userLanguage);
 
 langButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-        try {
-            const res = await fetch(`../languages/${button.dataset.language}.json`);
-            const data = await res.json();
-            
-            textsToChange.forEach((el) => {
-                const section = el.dataset.section;
-                const value = el.dataset.value;
-
-                el.innerHTML = data[section][value];
-            });
-
-            spansToChange.forEach((span=> {
-                const section = span.dataset.section;
-                const value = span.dataset.value;
-
-                span.innerHTML = data[section][value];
-            }));
-
-            if (button.dataset.language === 'es') {
-                typed.strings = ['Desarrollador Web Frontend'];
-            } else {
-                typed.strings = ['Frontend Web Developer'];
-            }
-            typed.reset();
-
-            if (button.dataset.language === 'es') {
-                downloadBtnSpanish.style.display = 'block';
-                downloadBtnEnglish.style.display = 'none';
-            } else {
-                downloadBtnSpanish.style.display = 'none';
-                downloadBtnEnglish.style.display = 'block';
-            }
-
-        } catch (error) {
-            console.log('error al cargar el archivo', error);
-        }
+    button.addEventListener("click", () => {
+        loadLanguage(button.dataset.language);
     });
 });
 
@@ -130,7 +129,7 @@ ScrollReveal().reveal('.home img, .proyectos-container,.contact form', { origin:
 /*--------------- typed js ---------------*/
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Desarrollador Web Frontend', 'Frontend Web Developer'],
+    strings: [],
     typeSpeed: 100,
     backSpeed: 150,
     loop: true
