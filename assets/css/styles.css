@@ -37,6 +37,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-size: 1.6rem;
+    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -97,6 +98,13 @@ span {
     font-size: 1.25rem;
     border: 0;
     cursor: pointer;
+}
+
+.language-flag {
+    width: 3.5rem;
+    height: 2.8rem;
+    border-radius: 2%;
+    margin-right: .5rem;
 }
 
 #menu-icon {
