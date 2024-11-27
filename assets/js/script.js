@@ -1,13 +1,3 @@
-/*--------------- typed js ---------------*/
-
-const typed = new Typed('.multiple-text', {
-    strings: ['Desarrollador Web Frontend'],
-    typeSpeed: 100,
-    backSpeed: 120,
-    loop: true
-});
-
-
 
 /*--------------- languaje ---------------*/
 const langButtons = document.querySelectorAll("[data-language]");
@@ -125,6 +115,15 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content, .conoceme-title, .proyectos-title, .contact-title', { origin: 'top' });
 ScrollReveal().reveal('.home img, .proyectos-container,.contact form', { origin: 'bottom' });
+
+/*--------------- typed js ---------------*/
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Desarrollador Web Frontend', 'Frontend Web Developer'],
+    typeSpeed: 100,
+    backSpeed: 150,
+    loop: true
+});
 
 
 /*--------------- form validation ---------------*/
