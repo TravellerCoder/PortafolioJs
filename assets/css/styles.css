@@ -64,7 +64,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-span {
+p .multiple-text {
     color : var(--main-color);
 }
 

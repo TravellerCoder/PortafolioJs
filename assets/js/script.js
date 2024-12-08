@@ -5,6 +5,8 @@ const textsToChange = document.querySelectorAll("[data-section]");
 const spansToChange = document.querySelectorAll("span[data-section]");
 const downloadBtnSpanish = document.getElementById('cv-button-spanish');
 const downloadBtnEnglish = document.getElementById('cv-button-english');
+const typedSpanish = "Desarrollador Web FrontEnd" ;
+const typedEnglish = "FrontEnd Web Developer";
 
 const loadLanguage = async (language) => {
     try {
@@ -22,15 +24,16 @@ const loadLanguage = async (language) => {
             const section = span.dataset.section;
             const value = span.dataset.value;
 
+
             span.innerHTML = data[section][value];
         }));
 
         if (language === 'es') {
-            typed.strings = ['Desarrollador Web Frontend'];
+            typed.strings = typedSpanish;
             downloadBtnSpanish.style.display = 'block';
             downloadBtnEnglish.style.display = 'none';
         } else {
-            typed.strings = ['Frontend Web Developer'];
+            typed.strings = typedEnglish;
             downloadBtnSpanish.style.display = 'none';
             downloadBtnEnglish.style.display = 'block';
         }
@@ -126,14 +129,46 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .conoceme-title, .proyectos-title, .contact-title', { origin: 'top' });
 ScrollReveal().reveal('.home img, .proyectos-container,.contact form', { origin: 'bottom' });
 
-/*--------------- typed js ---------------*/
+/*--------------- typed js ---------------
 
-const typed = new Typed('.multiple-text', {
-    strings: [],
-    typeSpeed: 100,
-    backSpeed: 150,
-    loop: true
-});
+
+// Definir las variables section y value
+const section = 'section';
+const value = 'value';
+
+
+// Verificar si Typed.js está cargado
+if (typeof Typed === 'undefined') {
+    console.error('Typed.js no está cargado.');
+} else {
+    console.log('Typed.js está cargado correctamente.');
+}
+
+// Verificar si el selector existe
+const multipleTextElement = document.querySelector('.multiple-text');
+if (!multipleTextElement) {
+    console.error('El elemento con el selector .multiple-text no existe.');
+} else {
+    console.log('El elemento con el selector .multiple-text existe.');
+}
+
+
+if (!data || !data[section] || !data[section][value]) {
+    console.error('Los datos para Typed.js no son válidos.');
+} else {
+    console.log('Los datos para Typed.js son válidos.');
+}
+
+
+if (typeof Typed !== 'undefined' && multipleTextElement && data && data[section] && data[section][value]) {
+    const typed = new Typed('.multiple-text', {
+        strings: ["FrontEnd Dev"],
+        typeSpeed: 100,
+        backSpeed: 150,
+        loop: true
+    });
+} */
+
 
 
 /*--------------- form validation ---------------*/
