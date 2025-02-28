@@ -8,8 +8,7 @@
 
     "home" : {
         "home-subtitle" : "Bienvenido",
-        "home-subtitle-description" : "Soy",
-        "home-subtitle-description-typed" : "Desarrollador Web Frontend",
+        "home-subtitle-description" : "Soy Desarrollador Web Frontend",
         "home-description-text1" : "Desarrollo web freelance y para empresas." ,
         "home-description-text2":"Tus ideas estan a un click de ser realidad.",
         "home-download" : "Descargar CV"
@@ -22,8 +21,7 @@
     },
 
     "projects" : {
-        "projects-title" : "Mis ",
-        "projects-title-p" : "proyectos"
+        "projects-title" : "Mis proyectos"
         },
 
         "projects-unity" : {
@@ -43,8 +41,7 @@
         },
 
     "contact-me" : {
-        "contact-me-title" : "Estemos en ",
-        "contact-me-title-span" : "contacto",
+        "contact-me-title" : "Estemos en contacto!",
         "input-name" : "Nombre completo"
     }
     

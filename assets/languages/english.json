@@ -8,8 +8,7 @@
 
     "home" : {
         "home-subtitle" : "Welcome",
-        "home-subtitle-description" : "I'm",
-        "home-subtitle-description-typed" : "Frontend Web Developer",
+        "home-subtitle-description" : "I'm Frontend Web Developer",
         "home-description-text1" : "Freelance web development and for companies.",
         "home-description-text2" : "Your ideas are one click away from becoming reality.",
         "home-download" : "Download CV"
@@ -22,8 +21,7 @@
     },
 
     "projects" : {
-        "projects-title" : "My ",
-        "projects-title-p" : "projects"
+        "projects-title" : "My projects"
         },
 
         "projects-unity" : {
@@ -43,8 +41,7 @@
         },
 
     "contact-me" : {
-        "contact-me-title" : "Let's keep in ",
-        "contact-me-title-span" : "contact",
+        "contact-me-title" : "Let's keep in contact! ",
         "input-name" : "Full Name"
     }
     

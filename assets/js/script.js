@@ -75,46 +75,6 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .conoceme-title, .proyectos-title, .contact-title', { origin: 'top' });
 ScrollReveal().reveal('.home img, .proyectos-container,.contact form', { origin: 'bottom' });
 
-/*--------------- typed js --------------- */
-
-
-// Definir las variables section y value
-const section = 'section';
-const value = 'value';
-
-
-// Verificar si Typed.js está cargado
-if (typeof Typed === 'undefined') {
-    console.error('Typed.js no está cargado.');
-} else {
-    console.log('Typed.js está cargado correctamente.');
-}
-
-// Verificar si el selector existe
-const multipleTextElement = document.querySelector('.multiple-text');
-if (!multipleTextElement) {
-    console.error('El elemento con el selector .multiple-text no existe.');
-} else {
-    console.log('El elemento con el selector .multiple-text existe.');
-}
-
-const spanishTyped = new Typed('.multiple-text', {
-    strings: [
-        'Desarrollador Web FrontEnd',
-    ],
-    typeSpeed: 50,
-    backSpeed: 50,
-    loop: true
-}); 
-
-const englishTyped = new Typed('.multiple-text', {
-    strings: [
-        'FrontEnd Web Developer',
-    ],
-    typeSpeed: 50,
-    backSpeed: 50,
-    loop: true
-});
 
 /*--------------- languaje ---------------*/
 const langButtons = document.querySelectorAll("[data-language]");
@@ -122,8 +82,6 @@ const textsToChange = document.querySelectorAll("[data-section]");
 const spansToChange = document.querySelectorAll("span[data-section]");
 const downloadBtnSpanish = document.getElementById('cv-button-spanish');
 const downloadBtnEnglish = document.getElementById('cv-button-english');
-const typedSpanishLoop = spanishTyped ;
-const typedEnglishLoop = englishTyped;
 
 const loadLanguage = async (language) => {
     try {
@@ -146,15 +104,12 @@ const loadLanguage = async (language) => {
         }));
 
         if (language === 'spanish') {
-            /*spanishTyped.strings = typedSpanishLoop;*/
             downloadBtnSpanish.style.display = 'block';
             downloadBtnEnglish.style.display = 'none';
         } else {
-            //englishTyped.strings = typedEnglishLoop;
             downloadBtnSpanish.style.display = 'none';
             downloadBtnEnglish.style.display = 'block';
         }
-        typed.reset();
     } catch (error) {
         console.log('error al cargar el archivo', error);
     }
