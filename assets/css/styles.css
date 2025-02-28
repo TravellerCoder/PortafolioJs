@@ -243,6 +243,7 @@ input:checked + .slider:before {
     font-weight: 600;
     margin-top: 2rem;
     transition: .5s ease;
+    max-width: 18rem;
 }
 
 .cv-button:hover {

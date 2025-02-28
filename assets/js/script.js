@@ -1,58 +1,4 @@
 
-/*--------------- languaje ---------------*/
-const langButtons = document.querySelectorAll("[data-language]");
-const textsToChange = document.querySelectorAll("[data-section]");
-const spansToChange = document.querySelectorAll("span[data-section]");
-const downloadBtnSpanish = document.getElementById('cv-button-spanish');
-const downloadBtnEnglish = document.getElementById('cv-button-english');
-const typedSpanish = "Desarrollador Web FrontEnd" ;
-const typedEnglish = "FrontEnd Web Developer";
-
-const loadLanguage = async (language) => {
-    try {
-        const res = await fetch(`../languages/${language}.json`);
-        const data = await res.json();
-        
-        textsToChange.forEach((el) => {
-            const section = el.dataset.section;
-            const value = el.dataset.value;
-
-            el.innerHTML = data[section][value];
-        });
-
-        spansToChange.forEach((span => {
-            const section = span.dataset.section;
-            const value = span.dataset.value;
-
-
-            span.innerHTML = data[section][value];
-        }));
-
-        if (language === 'es') {
-            typed.strings = typedSpanish;
-            downloadBtnSpanish.style.display = 'block';
-            downloadBtnEnglish.style.display = 'none';
-        } else {
-            typed.strings = typedEnglish;
-            downloadBtnSpanish.style.display = 'none';
-            downloadBtnEnglish.style.display = 'block';
-        }
-        typed.reset();
-    } catch (error) {
-        console.log('error al cargar el archivo', error);
-    }
-};
-
-const userLanguage = navigator.language.startsWith('es') ? 'spanish' : 'english';
-loadLanguage(userLanguage);
-
-langButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        loadLanguage(button.dataset.language);
-    });
-});
-
-
 /*--------------- dark-ligth mood ---------------*/
 
 const preferedColorTheme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
@@ -129,7 +75,7 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .conoceme-title, .proyectos-title, .contact-title', { origin: 'top' });
 ScrollReveal().reveal('.home img, .proyectos-container,.contact form', { origin: 'bottom' });
 
-/*--------------- typed js ---------------
+/*--------------- typed js --------------- */
 
 
 // Definir las variables section y value
@@ -152,24 +98,76 @@ if (!multipleTextElement) {
     console.log('El elemento con el selector .multiple-text existe.');
 }
 
+const spanishTyped = new Typed('.multiple-text', {
+    strings: [
+        'Desarrollador Web FrontEnd',
+    ],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+}); 
 
-if (!data || !data[section] || !data[section][value]) {
-    console.error('Los datos para Typed.js no son válidos.');
-} else {
-    console.log('Los datos para Typed.js son válidos.');
-}
+const englishTyped = new Typed('.multiple-text', {
+    strings: [
+        'FrontEnd Web Developer',
+    ],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+});
+
+/*--------------- languaje ---------------*/
+const langButtons = document.querySelectorAll("[data-language]");
+const textsToChange = document.querySelectorAll("[data-section]");
+const spansToChange = document.querySelectorAll("span[data-section]");
+const downloadBtnSpanish = document.getElementById('cv-button-spanish');
+const downloadBtnEnglish = document.getElementById('cv-button-english');
+const typedSpanishLoop = spanishTyped ;
+const typedEnglishLoop = englishTyped;
+
+const loadLanguage = async (language) => {
+    try {
+        const res = await fetch(`../languages/${language}.json`);
+        const data = await res.json();
+        
+        textsToChange.forEach((el) => {
+            const section = el.dataset.section;
+            const value = el.dataset.value;
+
+            el.innerHTML = data[section][value];
+        });
+
+        spansToChange.forEach((span => {
+            const section = span.dataset.section;
+            const value = span.dataset.value;
 
 
-if (typeof Typed !== 'undefined' && multipleTextElement && data && data[section] && data[section][value]) {
-    const typed = new Typed('.multiple-text', {
-        strings: ["FrontEnd Dev"],
-        typeSpeed: 100,
-        backSpeed: 150,
-        loop: true
+            span.innerHTML = data[section][value];
+        }));
+
+        if (language === 'spanish') {
+            /*spanishTyped.strings = typedSpanishLoop;*/
+            downloadBtnSpanish.style.display = 'block';
+            downloadBtnEnglish.style.display = 'none';
+        } else {
+            //englishTyped.strings = typedEnglishLoop;
+            downloadBtnSpanish.style.display = 'none';
+            downloadBtnEnglish.style.display = 'block';
+        }
+        typed.reset();
+    } catch (error) {
+        console.log('error al cargar el archivo', error);
+    }
+};
+
+const userLanguage = navigator.language.startsWith('es') ? 'spanish' : 'english';
+loadLanguage(userLanguage);
+
+langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        loadLanguage(button.dataset.language);
     });
-} */
-
-
+});
 
 /*--------------- form validation ---------------*/
 
