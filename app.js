@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 require('dotenv').config();
 const app = express();
 const publicPath = path.resolve(__dirname, 'assets');
@@ -40,8 +41,7 @@ app.use(express.urlencoded({ extended: true }));
     });
 
 app.use(express.static(publicPath));
-//const port = process.env.PORT || 3000;
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, (error) => {
     if (error) {
         return console.log(error)
