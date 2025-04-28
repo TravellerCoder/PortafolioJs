@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
         res.status(200).json({ success: true, message: "Mensaje enviado con éxito" });
         } catch (error) {
         console.error("Error al enviar el correo:", error);
-        res.status(500).json({ success: false, message: "Error al enviar el mensaje" });
+        res.status(500).json({ success: false, message: "Error al enviar el mensaje", error: error.toString() });
         }
     });
 
