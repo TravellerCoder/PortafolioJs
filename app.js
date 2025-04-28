@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
+console.log("EMAIL:", process.env.EMAIL_USER);
 const app = express();
 const publicPath = path.resolve(__dirname, 'assets');
 
@@ -14,6 +15,8 @@ app.use(express.urlencoded({ extended: true }));
     app.post("/contact", async (req, res) => {
         const { nombre, email, telefono, asunto, mensaje } = req.body;
     
+        console.log("Formulario recibido:", req.body);
+
         try {
         const transporter = nodemailer.createTransport({
             service: "gmail", 
