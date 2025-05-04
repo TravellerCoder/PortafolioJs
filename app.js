@@ -1,3 +1,7 @@
+console.log("Iniciando el servidor...");
+
+
+
 // --- Carga dotenv primero ---
 require('dotenv').config();
 
@@ -62,7 +66,7 @@ app.post("/contact", async (req, res) => {
 
         console.log("Correo enviado exitosamente:", info);
 
-        res.status(200).json({ success: true, message: "Mensaje enviado con éxito" });
+        res.redirect('./gracias.html')
     } catch (error) {
         console.error("Error al enviar el correo:", error);
         res.status(500).json({ 
