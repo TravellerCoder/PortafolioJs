@@ -66,7 +66,7 @@ app.post("/contact", async (req, res) => {
 
         console.log("Correo enviado exitosamente:", info);
 
-        res.redirect('./gracias.html')
+        res.redirect('/gracias.html')
     } catch (error) {
         console.error("Error al enviar el correo:", error);
         res.status(500).json({ 
