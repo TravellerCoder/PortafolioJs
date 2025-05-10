@@ -199,7 +199,7 @@ input:checked + .slider:before {
     line-height: 1.3;
 }
 
-.multiple-text{
+.home-content h3 {
     color: var(--main-color);
 }
 

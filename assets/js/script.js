@@ -87,6 +87,8 @@ const loadLanguage = async (language) => {
     try {
         const res = await fetch(`../languages/${language}.json`);
         const data = await res.json();
+        console.log(spansToChange);
+        
         
         textsToChange.forEach((el) => {
             const section = el.dataset.section;
@@ -94,14 +96,6 @@ const loadLanguage = async (language) => {
 
             el.innerHTML = data[section][value];
         });
-
-        spansToChange.forEach((span => {
-            const section = span.dataset.section;
-            const value = span.dataset.value;
-
-
-            span.innerHTML = data[section][value];
-        }));
 
         if (language === 'spanish') {
             downloadBtnSpanish.style.display = 'block';
